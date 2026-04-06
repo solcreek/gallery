@@ -1,34 +1,33 @@
-import { createFileRoute, Link, notFound, getRouteApi } from "@tanstack/react-router";
+import { createFileRoute, Link, getRouteApi } from "@tanstack/react-router";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { CapabilityBadges } from "@/components/capability-badge";
 import { DeployButton } from "@/components/deploy-button";
 import { CliCommand } from "@/components/cli-command";
-import { getTemplateBySlug, TYPE_LABELS, type Template } from "@/lib/templates";
+import { getTemplateBySlug, TYPE_LABELS } from "@/lib/templates";
 import { getGradient } from "@/lib/gradients";
 import { config } from "@/gallery.config";
 
 const rootApi = getRouteApi("__root__");
 
 export const Route = createFileRoute("/$slug")({
-  loader: ({ params, context }) => {
-    const { templates } = context as { templates: Template[] };
-    const template = getTemplateBySlug(templates, params.slug);
-    if (!template) throw notFound();
-    return template;
-  },
-  notFoundComponent: () => (
-    <div className="flex flex-col items-center justify-center py-32 gap-4">
-      <p className="text-muted-foreground">Template not found.</p>
-      <Link to="/" className="text-accent text-sm hover:underline">
-        Back to templates
-      </Link>
-    </div>
-  ),
   component: TemplateDetail,
 });
 
 function TemplateDetail() {
-  const template = Route.useLoaderData();
+  const { slug } = Route.useParams();
+  const { templates } = rootApi.useLoaderData();
+  const template = getTemplateBySlug(templates, slug);
+
+  if (!template) {
+    return (
+      <div className="flex flex-col items-center justify-center py-32 gap-4">
+        <p className="text-muted-foreground">Template not found.</p>
+        <Link to="/" className="text-accent text-sm hover:underline">
+          Back to templates
+        </Link>
+      </div>
+    );
+  }
   const gradient = getGradient(template.slug);
   const sourceUrl = template.sourceUrl ?? `${config.sourceUrl}/${template.slug}`;
 
