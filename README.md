@@ -42,7 +42,7 @@ Template catalog (no rebuild needed to update):
       "name": "My Template",
       "description": "What it does",
       "type": "app",
-      "capabilities": ["d1", "ai"],
+      "capabilities": ["database", "ai"],
       "screenshotUrl": null
     }
   ]
