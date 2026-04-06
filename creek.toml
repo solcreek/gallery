@@ -1,0 +1,6 @@
+[project]
+name = "gallery"
+
+[build]
+command = "npm run build"
+output = "dist"

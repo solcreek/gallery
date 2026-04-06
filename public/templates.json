@@ -1,0 +1,211 @@
+{
+  "templates": [
+    {
+      "slug": "landing",
+      "name": "Landing",
+      "description": "Landing page with hero and CTA",
+      "type": "site",
+      "capabilities": [],
+      "screenshotUrl": null,
+      "featured": true
+    },
+    {
+      "slug": "blog",
+      "name": "Blog",
+      "description": "Blog with image uploads",
+      "type": "site",
+      "capabilities": ["d1", "r2"],
+      "screenshotUrl": null,
+      "featured": true
+    },
+    {
+      "slug": "link-in-bio",
+      "name": "Link in Bio",
+      "description": "Social links page",
+      "type": "site",
+      "capabilities": [],
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "waitlist",
+      "name": "Waitlist",
+      "description": "Waitlist with AI user segmentation",
+      "type": "site",
+      "capabilities": ["d1", "ai"],
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "form",
+      "name": "Form",
+      "description": "Form collector with admin dashboard",
+      "type": "app",
+      "capabilities": ["d1"],
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "dashboard",
+      "name": "Dashboard",
+      "description": "Data dashboard with scheduled refresh",
+      "type": "app",
+      "capabilities": ["d1", "realtime", "cron"],
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "chatbot",
+      "name": "Chatbot",
+      "description": "AI chatbot with conversation history",
+      "type": "app",
+      "capabilities": ["d1", "ai"],
+      "screenshotUrl": null,
+      "featured": true
+    },
+    {
+      "slug": "survey",
+      "name": "Survey",
+      "description": "Survey with AI-powered analysis",
+      "type": "app",
+      "capabilities": ["d1", "ai"],
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "knowledge-base",
+      "name": "Knowledge Base",
+      "description": "Knowledge base with AI search",
+      "type": "app",
+      "capabilities": ["d1", "ai", "r2"],
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "status-page",
+      "name": "Status Page",
+      "description": "Service status page with uptime monitoring",
+      "type": "app",
+      "capabilities": ["d1", "realtime", "cron", "kv"],
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "file-share",
+      "name": "File Share",
+      "description": "File upload/download with expiring links",
+      "type": "app",
+      "capabilities": ["d1", "r2"],
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "todo",
+      "name": "Todo",
+      "description": "Realtime todo app (learning example)",
+      "type": "app",
+      "capabilities": ["d1", "realtime"],
+      "screenshotUrl": null,
+      "featured": true
+    },
+    {
+      "slug": "approval-flow",
+      "name": "Approval Flow",
+      "description": "Approval workflow — leave, expense, procurement",
+      "type": "workflow",
+      "capabilities": ["d1", "realtime", "queue"],
+      "trigger": "webhook",
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "invoice-processor",
+      "name": "Invoice Processor",
+      "description": "Email invoice → AI extract → DB → notify",
+      "type": "workflow",
+      "capabilities": ["d1", "ai", "r2", "email"],
+      "trigger": "email",
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "scheduled-report",
+      "name": "Scheduled Report",
+      "description": "Scheduled query → AI summary → PDF report",
+      "type": "workflow",
+      "capabilities": ["d1", "ai", "r2", "cron"],
+      "trigger": "cron",
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "data-sync",
+      "name": "Data Sync",
+      "description": "Scheduled API pull → diff → DB → notify",
+      "type": "workflow",
+      "capabilities": ["d1", "cron"],
+      "trigger": "cron",
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "ai-classifier",
+      "name": "AI Classifier",
+      "description": "Input → AI classify → route to queue",
+      "type": "workflow",
+      "capabilities": ["d1", "ai", "queue"],
+      "trigger": "webhook",
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "api",
+      "name": "REST API",
+      "description": "REST API with Hono",
+      "type": "connector",
+      "capabilities": ["d1"],
+      "trigger": "http",
+      "screenshotUrl": null,
+      "featured": true
+    },
+    {
+      "slug": "webhook-receiver",
+      "name": "Webhook Receiver",
+      "description": "Receive and process external webhooks",
+      "type": "connector",
+      "capabilities": ["d1", "queue"],
+      "trigger": "webhook",
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "email-to-db",
+      "name": "Email to DB",
+      "description": "Email → parse → attachments to R2 → DB",
+      "type": "connector",
+      "capabilities": ["d1", "r2", "email"],
+      "trigger": "email",
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "ftp-sync",
+      "name": "FTP Sync",
+      "description": "Scheduled FTP/SFTP pull → parse → DB",
+      "type": "connector",
+      "capabilities": ["d1", "r2", "cron", "ftp"],
+      "trigger": "cron",
+      "screenshotUrl": null,
+      "featured": false
+    },
+    {
+      "slug": "blank",
+      "name": "Blank",
+      "description": "Minimal Creek project (empty canvas)",
+      "type": "developer",
+      "capabilities": [],
+      "screenshotUrl": null,
+      "featured": false
+    }
+  ]
+}
