@@ -14,7 +14,10 @@
       "name": "Blog",
       "description": "Blog with image uploads",
       "type": "site",
-      "capabilities": ["d1", "r2"],
+      "capabilities": [
+        "database",
+        "storage"
+      ],
       "screenshotUrl": null,
       "featured": true
     },
@@ -32,7 +35,10 @@
       "name": "Waitlist",
       "description": "Waitlist with AI user segmentation",
       "type": "site",
-      "capabilities": ["d1", "ai"],
+      "capabilities": [
+        "database",
+        "ai"
+      ],
       "screenshotUrl": null,
       "featured": false
     },
@@ -41,7 +47,9 @@
       "name": "Form",
       "description": "Form collector with admin dashboard",
       "type": "app",
-      "capabilities": ["d1"],
+      "capabilities": [
+        "database"
+      ],
       "screenshotUrl": null,
       "featured": false
     },
@@ -50,7 +58,11 @@
       "name": "Dashboard",
       "description": "Data dashboard with scheduled refresh",
       "type": "app",
-      "capabilities": ["d1", "realtime", "cron"],
+      "capabilities": [
+        "database",
+        "realtime",
+        "cron"
+      ],
       "screenshotUrl": null,
       "featured": false
     },
@@ -59,7 +71,10 @@
       "name": "Chatbot",
       "description": "AI chatbot with conversation history",
       "type": "app",
-      "capabilities": ["d1", "ai"],
+      "capabilities": [
+        "database",
+        "ai"
+      ],
       "screenshotUrl": null,
       "featured": true
     },
@@ -68,7 +83,10 @@
       "name": "Survey",
       "description": "Survey with AI-powered analysis",
       "type": "app",
-      "capabilities": ["d1", "ai"],
+      "capabilities": [
+        "database",
+        "ai"
+      ],
       "screenshotUrl": null,
       "featured": false
     },
@@ -77,7 +95,11 @@
       "name": "Knowledge Base",
       "description": "Knowledge base with AI search",
       "type": "app",
-      "capabilities": ["d1", "ai", "r2"],
+      "capabilities": [
+        "database",
+        "ai",
+        "storage"
+      ],
       "screenshotUrl": null,
       "featured": false
     },
@@ -86,7 +108,12 @@
       "name": "Status Page",
       "description": "Service status page with uptime monitoring",
       "type": "app",
-      "capabilities": ["d1", "realtime", "cron", "kv"],
+      "capabilities": [
+        "database",
+        "realtime",
+        "cron",
+        "cache"
+      ],
       "screenshotUrl": null,
       "featured": false
     },
@@ -95,7 +122,10 @@
       "name": "File Share",
       "description": "File upload/download with expiring links",
       "type": "app",
-      "capabilities": ["d1", "r2"],
+      "capabilities": [
+        "database",
+        "storage"
+      ],
       "screenshotUrl": null,
       "featured": false
     },
@@ -104,16 +134,23 @@
       "name": "Todo",
       "description": "Realtime todo app (learning example)",
       "type": "app",
-      "capabilities": ["d1", "realtime"],
+      "capabilities": [
+        "database",
+        "realtime"
+      ],
       "screenshotUrl": null,
       "featured": true
     },
     {
       "slug": "approval-flow",
       "name": "Approval Flow",
-      "description": "Approval workflow — leave, expense, procurement",
+      "description": "Approval workflow \u2014 leave, expense, procurement",
       "type": "workflow",
-      "capabilities": ["d1", "realtime", "queue"],
+      "capabilities": [
+        "database",
+        "realtime",
+        "queue"
+      ],
       "trigger": "webhook",
       "screenshotUrl": null,
       "featured": false
@@ -121,9 +158,14 @@
     {
       "slug": "invoice-processor",
       "name": "Invoice Processor",
-      "description": "Email invoice → AI extract → DB → notify",
+      "description": "Email invoice \u2192 AI extract \u2192 DB \u2192 notify",
       "type": "workflow",
-      "capabilities": ["d1", "ai", "r2", "email"],
+      "capabilities": [
+        "database",
+        "ai",
+        "storage",
+        "email"
+      ],
       "trigger": "email",
       "screenshotUrl": null,
       "featured": false
@@ -131,9 +173,14 @@
     {
       "slug": "scheduled-report",
       "name": "Scheduled Report",
-      "description": "Scheduled query → AI summary → PDF report",
+      "description": "Scheduled query \u2192 AI summary \u2192 PDF report",
       "type": "workflow",
-      "capabilities": ["d1", "ai", "r2", "cron"],
+      "capabilities": [
+        "database",
+        "ai",
+        "storage",
+        "cron"
+      ],
       "trigger": "cron",
       "screenshotUrl": null,
       "featured": false
@@ -141,9 +188,12 @@
     {
       "slug": "data-sync",
       "name": "Data Sync",
-      "description": "Scheduled API pull → diff → DB → notify",
+      "description": "Scheduled API pull \u2192 diff \u2192 DB \u2192 notify",
       "type": "workflow",
-      "capabilities": ["d1", "cron"],
+      "capabilities": [
+        "database",
+        "cron"
+      ],
       "trigger": "cron",
       "screenshotUrl": null,
       "featured": false
@@ -151,9 +201,13 @@
     {
       "slug": "ai-classifier",
       "name": "AI Classifier",
-      "description": "Input → AI classify → route to queue",
+      "description": "Input \u2192 AI classify \u2192 route to queue",
       "type": "workflow",
-      "capabilities": ["d1", "ai", "queue"],
+      "capabilities": [
+        "database",
+        "ai",
+        "queue"
+      ],
       "trigger": "webhook",
       "screenshotUrl": null,
       "featured": false
@@ -163,7 +217,9 @@
       "name": "REST API",
       "description": "REST API with Hono",
       "type": "connector",
-      "capabilities": ["d1"],
+      "capabilities": [
+        "database"
+      ],
       "trigger": "http",
       "screenshotUrl": null,
       "featured": true
@@ -173,7 +229,10 @@
       "name": "Webhook Receiver",
       "description": "Receive and process external webhooks",
       "type": "connector",
-      "capabilities": ["d1", "queue"],
+      "capabilities": [
+        "database",
+        "queue"
+      ],
       "trigger": "webhook",
       "screenshotUrl": null,
       "featured": false
@@ -181,9 +240,13 @@
     {
       "slug": "email-to-db",
       "name": "Email to DB",
-      "description": "Email → parse → attachments to R2 → DB",
+      "description": "Email \u2192 parse \u2192 attachments to R2 \u2192 DB",
       "type": "connector",
-      "capabilities": ["d1", "r2", "email"],
+      "capabilities": [
+        "database",
+        "storage",
+        "email"
+      ],
       "trigger": "email",
       "screenshotUrl": null,
       "featured": false
@@ -191,9 +254,14 @@
     {
       "slug": "ftp-sync",
       "name": "FTP Sync",
-      "description": "Scheduled FTP/SFTP pull → parse → DB",
+      "description": "Scheduled FTP/SFTP pull \u2192 parse \u2192 DB",
       "type": "connector",
-      "capabilities": ["d1", "r2", "cron", "ftp"],
+      "capabilities": [
+        "database",
+        "storage",
+        "cron",
+        "ftp"
+      ],
       "trigger": "cron",
       "screenshotUrl": null,
       "featured": false
